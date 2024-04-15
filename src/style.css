@@ -1,0 +1,35 @@
+@import "reset.css";
+
+:root {
+    /* ======== color ======== */
+
+    /* black */
+    --bs-black: #000000;
+    --bs-black-90: #333333;
+    --bs-black-80: #4D4D4D;
+    --bs-black-70: #666666;
+    --bs-black-60: #7F7F7F;
+    --bs-black-50: #999999;
+    --bs-black-40: #B3B3B3;
+    --bs-black-30: #CCCCCC;
+    --bs-black-20: #B3B3B3;
+    --bs-black-10: #E6E6E6;
+
+    /* white */
+    --bs-white: #FFFFFF;
+    
+    /* mainColor */
+    --bs-main-1: #CBB1A5;
+    --bs-main-2: #C2C5BE;
+    --bs-main-3: #DDCBBE;
+    --bs-main-4: #E6CDB9;
+    --bs-main-5: #D2CBC5;
+    --bs-main-6: #EFE2D9;
+    --bs-main-7: #FCF6EA;
+    --bs-main-8: #FFFAFE;
+    --bs-main-9: #B69782;
+    --bs-main-10: #564B41;
+    --bs-main-11: #F4EBE6;
+    --bs-main-12: #FFFDF4;
+
+}
