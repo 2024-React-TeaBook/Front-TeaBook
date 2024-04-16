@@ -1,0 +1,39 @@
+header {
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-container {
+    color: var(--bs-white);
+    text-align: center;
+    z-index: 1;
+}
+.title {
+    font-weight: var(--bs-font-bold);
+    font-size: var(--bs-font-36px);
+}
+.sub-title {
+    margin-top: 25px;
+    font-size: var(--bs-font-16px);
+}
+
+/* 도형 */
+.figure {
+    position: absolute;
+    width: 370px;
+    height: 275px;
+    background-color: var(--bs-main-9);
+    border-radius: 200px 200px 0 0;
+    opacity: 50%;
+}
+
+/* 공유 버튼 */
+.share-container {
+    position: absolute;
+    display: flex;
+    column-gap: 20px;
+    left: 75px;
+    bottom: 18px;
+}
