@@ -32,4 +32,12 @@
     --bs-main-11: #F4EBE6;
     --bs-main-12: #FFFDF4;
 
+
+
+    /* ======== font ======== */
+    /* font-size */
+    --bs-font-16px: 16px;
+    --bs-font-36px: 36px;
+
+
 }
