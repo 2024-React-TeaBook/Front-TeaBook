@@ -38,3 +38,6 @@ header {
     left: 75px;
     bottom: 18px;
 }
+.share-container > * {
+    cursor: pointer;
+}

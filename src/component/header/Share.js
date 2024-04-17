@@ -15,6 +15,11 @@ const Share = () => {
         const kakao = window.Kakao;
         if (!kakao.isInitialized()) kakao.init(process.env.REACT_APP_VITE_KAKAO_API_KEY)
     }
+
+    const shareFacebook = () => {
+        window.open('http://www.facebook.com/sharer.php?u=' + url);
+    }
+
     const shareKakao = () => {
         window.Kakao.Link.sendDefault({
             objectType: 'feed',
@@ -44,10 +49,10 @@ const Share = () => {
 
     return (
         <div className={'share-container'}>
-            <img onClick={() => copyUrl()} className={'share'} src={'img/header/icon-share/share.png'} alt={'share url'} />
-            <img className={'share'} src={'img/header/icon-share/instagram.png'} alt={'share instagram'} />
-            <img onClick={() => shareKakao()} className={'share'} src={'img/header/icon-share/kakaotalk.png'} alt={'share kakaotalk'} />
-            <img onClick={() => shareTwitter()} className={'share'} src={'img/header/icon-share/twitter.png'} alt={'share twitter'} />
+            <img onClick={() => copyUrl()} src={'img/header/icon-share/share.png'} alt={'share url'} />
+            <img onClick={() => shareFacebook()} src={'img/header/icon-share/facebook.png'} alt={'share instagram'} />
+            <img onClick={() => shareKakao()} src={'img/header/icon-share/kakaotalk.png'} alt={'share kakaotalk'} />
+            <img onClick={() => shareTwitter()} src={'img/header/icon-share/twitter.png'} alt={'share twitter'} />
         </div>
     )
 }
