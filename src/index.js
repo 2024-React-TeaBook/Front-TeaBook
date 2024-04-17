@@ -4,10 +4,13 @@ import './style.css'
 import Nav from  './component/nav/Nav'
 import Header from './component/header/Header'
 
+import Introduction from './component/info/Info'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <div>
         <Nav />
         <Header />
+        <Introduction/>
     </div>
 );
