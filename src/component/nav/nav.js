@@ -1,13 +1,33 @@
 // Nav.js
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logo from './img/logo.png';
 import toggle1 from './img/toggle-stop.png';
 import toggle2 from './img/toggle-play.png';
 import useImageToggle from "./Toggler";
-import './nav.css'
+import { playMusic, stopMusic, setMusicTime } from "./musicController";
+import './nav.css';
 
-const Nav = function (props) {
+const Nav = function () {
     const [currentImage, toggleImage] = useImageToggle(toggle1, toggle2);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [currentTime, setCurrentTime] = useState(0);
+
+
+    const handleToggle = () => {
+        toggleImage();
+        setIsPlaying(!isPlaying);
+        if (isPlaying) {
+            stopMusic();
+        } else {
+            playMusic("audio/main.mp3");
+        }
+    };
+
+    const handleTimeChange = (e) => {
+        const newTime = e.target.value;
+        setCurrentTime(newTime);
+        setMusicTime(newTime);
+    };
 
     return (
         <nav>
@@ -20,15 +40,23 @@ const Nav = function (props) {
                         <img
                             src={currentImage}
                             className='player-toggle'
-                            onClick={toggleImage}
-                            alt={currentImage === toggle1 ? "stop" : "play"}
+                            onClick={handleToggle}
+                            alt={isPlaying ? "stop" : "play"}
                         />
-                        <div className="music-player-bar"></div>
+                        <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            value={currentTime}
+                            onChange={handleTimeChange}
+                            className="music-player-bar"
+                        />
                     </div>
                 </li>
             </ul>
+            <div className="test"></div>
         </nav>
-    )
+    );
 }
 
 export default Nav;

@@ -5,6 +5,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 65px;
 } 
 .title-container {
     color: var(--bs-white);
