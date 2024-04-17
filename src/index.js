@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import styles from './style.css';
+import './style.css'
 import Nav from  './component/nav/Nav'
-import './component/nav/nav.css'
+import Header from './component/header/Header'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <div>
-        <Nav/>
+        <Nav />
+        <Header />
     </div>
 );
-
-// import './component/nav/use-effect-unmount'

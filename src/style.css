@@ -36,6 +36,8 @@
 
     /* ======== font ======== */
     /* font-size */
+    --bs-font-10px: 10px;
+    --bs-font-13px: 13px;
     --bs-font-16px: 16px;
     --bs-font-36px: 36px;
 

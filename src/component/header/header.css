@@ -1,10 +1,11 @@
 header {
     height: 400px;
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} 
 .title-container {
     color: var(--bs-white);
     text-align: center;
