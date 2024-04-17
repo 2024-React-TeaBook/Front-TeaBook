@@ -49,10 +49,10 @@ const Share = () => {
 
     return (
         <div className={'share-container'}>
-            <img onClick={() => copyUrl()} src={'img/header/icon-share/share.png'} alt={'share url'} />
-            <img onClick={() => shareFacebook()} src={'img/header/icon-share/facebook.png'} alt={'share instagram'} />
-            <img onClick={() => shareKakao()} src={'img/header/icon-share/kakaotalk.png'} alt={'share kakaotalk'} />
-            <img onClick={() => shareTwitter()} src={'img/header/icon-share/twitter.png'} alt={'share twitter'} />
+            <img onClick={() => copyUrl()} src={'img/header/icon-share/share.svg'} alt={'share url'} />
+            <img onClick={() => shareFacebook()} src={'img/header/icon-share/facebook.svg'} alt={'share instagram'} />
+            <img onClick={() => shareKakao()} src={'img/header/icon-share/kakaotalk.svg'} alt={'share kakaotalk'} />
+            <img onClick={() => shareTwitter()} src={'img/header/icon-share/twitter.svg'} alt={'share twitter'} />
         </div>
     )
 }
