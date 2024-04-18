@@ -1,7 +1,9 @@
 const Info = () => {
     return (
-        <div>
-            
+        <div className="top">
+            <div>
+                
+            </div>
         </div>
     )
 }
