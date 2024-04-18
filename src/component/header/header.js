@@ -3,12 +3,12 @@ import './header.css'
 
 const Header = () => {
     return (
-        <div className='top'>
-            <header style={
-                {
-                    background: "url('img/header/background.png') no-repeat center",
-                    backgroundSize: "cover"
-                }}>
+        <div className='top'
+            style={{
+                background: "url('img/header/background.png') no-repeat center",
+                backgroundSize: "cover"
+            }}>
+            <header>
                 <div className="figure"></div>
                 <div className="title-container">
                     <div className="title">책과 차의 만남이 이루어지다, 다독</div>
