@@ -36,10 +36,10 @@ header {
     position: absolute;
     display: flex;
     column-gap: 20px;
-    left: 75px;
+    left: 5vw;
     bottom: 18px;
 }
 .share-container > * {
     cursor: pointer;
-    width: 20px;
+    width: 18px;
 }

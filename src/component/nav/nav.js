@@ -1,5 +1,5 @@
 // Nav.js
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import logo from './img/logo.png';
 import toggle1 from './img/toggle-stop.png';
 import toggle2 from './img/toggle-play.png';
@@ -30,32 +30,34 @@ const Nav = function () {
     };
 
     return (
-        <nav>
-            <img src={logo} className='Header-logo' alt="logo" />
-            <ul className="menu-ul">
-                <li className={"li-text"}>사이트 소개</li>
-                <li className={"li-text"}>장르 선택</li>
-                <li>
-                    <div className="music-player-div">
-                        <img
-                            src={currentImage}
-                            className='player-toggle'
-                            onClick={handleToggle}
-                            alt={isPlaying ? "stop" : "play"}
-                        />
-                        <input
-                            type="range"
-                            min="0"
-                            max="100"
-                            value={currentTime}
-                            onChange={handleTimeChange}
-                            className="music-player-bar"
-                        />
-                    </div>
-                </li>
-            </ul>
-            <div className="test"></div>
-        </nav>
+        <div className="top">
+            <nav>
+                <img src={logo} className='Header-logo' alt="logo" />
+                <ul className="menu-ul">
+                    <li className={"li-text"}>사이트 소개</li>
+                    <li className={"li-text"}>장르 선택</li>
+                    <li>
+                        <div className="music-player-div">
+                            <img
+                                src={currentImage}
+                                className='player-toggle'
+                                onClick={handleToggle}
+                                alt={isPlaying ? "stop" : "play"}
+                            />
+                            <input
+                                type="range"
+                                min="0"
+                                max="100"
+                                value={currentTime}
+                                onChange={handleTimeChange}
+                                className="music-player-bar"
+                            />
+                        </div>
+                    </li>
+                </ul>
+                <div className="test"></div>
+            </nav>
+        </div>
     );
 }
 
