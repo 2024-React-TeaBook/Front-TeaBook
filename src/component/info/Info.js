@@ -1,10 +1,10 @@
 import './info.css'
 
 function InfoContainer({ classNameItem, themeStyle }) {
-    const imgSrc = `${process.env.PUBLIC_URL}/img/info/${themeStyle}`;
+    const imgSrc = `${process.env.PUBLIC_URL}/img/info/${themeStyle}-${classNameItem}.png`;
     return (
         <div className={`${classNameItem} info-container`}>
-            <img src={`${imgSrc}-1.png`} alt='bgimg'/>
+            <img src={`${imgSrc}`} alt='bgimg'/>
         </div>
     )
     
@@ -15,7 +15,7 @@ const Info = ({themeStyle}) => {
         <div className="top">
             <div>
                 <InfoContainer classNameItem={"left"} themeStyle={themeStyle}/>
-                <InfoContainer classNameItem={"right"} themeName={themeStyle}/>
+                <InfoContainer classNameItem={"right"} themeStyle={themeStyle}/>
             </div>
         </div>
     )
