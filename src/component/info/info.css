@@ -1,3 +1,26 @@
-.info-container {
+.info {
     height: 683px;
+    display: flex;
+    justify-content: center;
+    column-gap: 8vw;
+    background-color: var(--bs-main-12);
+}
+.info-container {
+    margin-top: 130px;
+}
+
+.left {
+    color: var(--bs-black-80);
+    font-size: var(--bs-font-13px);
+}
+.left > div {
+    margin-top: 18px;
+}
+.right {
+    font-size: var(--bs-font-16px);
+    font-weight: var(--bs-font-bold);
+}
+.right > div {
+    margin-top: 100px;
+    margin-bottom: 18px;
 }
