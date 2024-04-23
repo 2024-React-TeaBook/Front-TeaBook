@@ -15,7 +15,7 @@ const Info = ({themeStyle}) => {
         <div className="top">
             <div>
                 <InfoContainer classNameItem={"left"} themeStyle={themeStyle}/>
-                {/* <InfoContainer classNameItem={"right"} themeName={theme}/> */}
+                <InfoContainer classNameItem={"right"} themeName={themeStyle}/>
             </div>
         </div>
     )

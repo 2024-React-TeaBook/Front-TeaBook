@@ -4,7 +4,7 @@ import './style.css'
 import Nav from './component/nav/nav.js'
 import Header from './component/header/header.js'
 
-import Info from './component/info/Info'
+import Info from './component/info/info.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const Index = (props) => {
