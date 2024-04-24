@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './style.css'
 import Nav from './component/nav/nav.js'
 import Header from './component/header/header.js'
-
 import Info from './component/info/info.js'
+import Select from './component/select/Select'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const Index = (props) => {
@@ -15,6 +15,7 @@ const Index = (props) => {
             <Nav />
             <Header />
             <Info themeStyle={theme} />
+            <Select />
         </div>
     )
 }
