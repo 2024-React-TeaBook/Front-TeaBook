@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import './select.css'
 import GenreSelect from "./GenreSelect";
 
@@ -14,8 +13,14 @@ const Select = function () {
                 <div className="line-div" id="line-div-2"></div>
             </div>
 
-            <GenreSelect />
+            <div className="select-genre-div-parent">
+                <div className="select-genre-div">
 
+                    <GenreSelect genreName="romance"/>
+                    <GenreSelect genreName="horror"/>
+                    <GenreSelect genreName="sf"/>
+                </div>
+            </div>
 
         </div>
     </div>)
