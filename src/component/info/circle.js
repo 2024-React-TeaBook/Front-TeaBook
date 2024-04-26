@@ -1,5 +1,7 @@
+import React, { useEffect } from 'react'
+
 const Circle = () => {
-    window.onload = () => {
+    useEffect(()=>{
         const text = document.querySelector(".text");
         const textContent = text.innerText.trim();
         const radius = 300;
@@ -13,7 +15,8 @@ const Circle = () => {
                 return `<span style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) translate(${x}px, ${y}px) rotate(${angle}deg);">${char}</span>`;
             })
             .join("");
-    };
+        
+    }, [])
 
     return (
         <div class="circle">
