@@ -1,52 +1,25 @@
-import React, { useState } from "react";
-import './select.css'
+import './select.css';
+import genreJsonInfo from '../../json/genreJsonInfo';
 
-const GenreSelect = function () {
+const GenreSelect = function ({ genreName }) {
     return (
-        <div className="select-genre-div-parent">
-            <div className="select-genre-div">
-                <div className="genre-div">
-                    <div className="genre-div-1 genre-romance-1" style={{
-                        background: "url('img/select/genre-romance.png') no-repeat center",
-                        backgroundSize: "cover"
-                    }}></div>
-                    <div className="genre-div-2 genre-romance-2">
-                        <div className="genre-text">
-                            <h1 className="genre-text-1">로맨스</h1>
-                            <h3 className="genre-text-2">#사랑 #만남 #설렘</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="genre-div">
-                    <div className="genre-div-1 genre-horror-1" style={{
-                        background: "url('img/select/genre-horror.png') no-repeat center",
-                        backgroundSize: "cover"
-                    }}></div>
-                    <div className="genre-div-2 genre-horror-2">
-                        <div className="genre-text">
-                            <h1 className="genre-text-1">공포</h1>
-                            <h3 className="genre-text-2">#귀신 #어둠 #악몽</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="genre-div">
-                    <div className="genre-div-1 genre-sf-1" style={{
-                        background: "url('img/select/genre-sf.png') no-repeat center",
-                        backgroundSize: "cover"
-                    }}></div>
-                    <div className="genre-div-2 genre-sf-2">
-                        <div className="genre-text">
-                            <h1 className="genre-text-1">SF</h1>
-                            <h3 className="genre-text-2">#미래 #우주 #로봇</h3>
-                        </div>
-
-                    </div>
+        <div className="genre-div">
+            <div className="genre-div-1" style={{
+                background: `url('img/select/genre-${genreName}.png') no-repeat center`,
+                backgroundSize: "cover"
+            }}></div>
+            <div className="genre-div-2">
+                <div className="genre-text">
+                    <h1 className="genre-text-1">{genreJsonInfo[genreName].title}</h1>
+                    <h3 className="genre-text-2">{
+                        genreJsonInfo[genreName].hashtag.map((e) => {
+                            return `#${e} `;
+                        })
+                    }</h3>
                 </div>
             </div>
         </div>
     )
 }
 
-export default GenreSelect
+export default GenreSelect;
