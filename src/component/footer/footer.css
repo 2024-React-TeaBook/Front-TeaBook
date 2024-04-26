@@ -1,0 +1,41 @@
+.footerTop {
+    background-color: var(--bs-main-10);
+}
+footer {
+    padding: 30px 40px 12px 40px;
+    color: var(--bs-white);
+    font-size: var(--bs-font-12px);
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+}
+.mirim-info-container > div {
+    margin-left: 8px;
+}
+
+.mirim-info-container > div:nth-child(2) {
+    font-size: var(--bs-font-14px);
+}
+.logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+.mirim-sub-info {
+    margin-top: 12px;
+    display: flex;
+    column-gap: 12px;
+}
+.manager-info-container {
+    display: flex;
+    column-gap: 56px;
+}
+.manager-info > div{
+    margin-bottom: 18px;
+}
+.manager-info > * {
+    display: flex;
+}
+.github-img {
+    width: 14px;
+    margin-right: 3px;
+}

@@ -65,7 +65,7 @@
     height:168px;
     border-radius: 100px;
     /* background-color: aqua; */
-    border: 0.5px solid black;
+    border: 0.5px solid var(--bs-black-60);
     position: absolute;
     padding-top: 80px;
 }
