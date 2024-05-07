@@ -1,0 +1,34 @@
+.genre-conatainer {
+    height: 260px;
+    background-color: var(--bs-white);
+    position: relative;
+}
+.genre-img-container {
+    position: absolute;
+    z-index: 100;
+    border-radius: 0 0 200px 200px;
+    width: 365px;
+    height: 325px;
+    right: 4vw;
+}
+
+.genre-text-container {
+    display: flex;
+    margin-left: 6vw;
+    text-align: center;
+    align-items: center;
+    height: 260px;
+}
+.genre-hashTag {
+    font-size: var(--bs-font-12px);
+}
+.genre-title {
+    font-size: var(--bs-font-22px);
+    font-weight: var(--bs-font-bold);
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+.genre-content {
+    font-size: var(--bs-font-16px);
+    line-height: 1.6;
+}
