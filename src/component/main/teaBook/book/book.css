@@ -2,3 +2,26 @@
     height: 440px;
     background-color: var(--bs-main-7);
 }
+.book-title > div:nth-child(1) {
+    color: var(--bs-main-9);
+}
+.book-title > div:nth-child(2) {
+    color: var(--bs-black-90);
+}
+
+.book {
+    display: flex;
+    justify-content: center;
+    column-gap: 4vw;
+}
+.book-info-container {
+    width: fit-content;
+}
+.book-img {
+    width: 175px;
+    height: 260px;
+}
+.book-text-info {
+    display: flex;
+    justify-content: space-between;
+}

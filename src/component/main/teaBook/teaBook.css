@@ -1,0 +1,15 @@
+.teaBook-container {
+    padding-top: 24px;
+}
+.teaBook-title-container {
+    text-align: center;
+}
+.teaBook-title-container > div:nth-child(1) {
+    font-size: var(--bs-font-14px);
+}
+.teaBook-title-container > div:nth-child(2) {
+    font-weight: var(--bs-font-bold);
+    font-size: var(--bs-font-24px);
+    margin-top: 8px;
+    margin-bottom: 38px;
+}
