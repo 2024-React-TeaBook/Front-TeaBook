@@ -5,7 +5,7 @@ const Main = ({ themeStyle }) => {
     return (
         <div className='top'>
             <Genre themeStyle={themeStyle}/>
-            <TeaBook />
+            <TeaBook themeStyle={themeStyle}/>
         </div>
     )
 }
