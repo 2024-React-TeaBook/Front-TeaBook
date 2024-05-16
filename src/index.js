@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import './style.css'
 import Nav from './component/nav/nav.js'
@@ -10,7 +11,7 @@ import Main from './component/main/main.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const Index = (props) => {
-    const [theme] = useState("romance");
+    const [theme, setTheme] = useState("romance");
 
     return (
         <div>
@@ -18,11 +19,11 @@ const Index = (props) => {
             <Header />
             <Info themeStyle={theme} />
             <Select />
-            <Main themeStyle={theme}/>
+            <Main themeStyle={theme} />
             <Footer />
         </div>
     )
 }
 root.render(
-    <Index/>
+    <Index />
 );
