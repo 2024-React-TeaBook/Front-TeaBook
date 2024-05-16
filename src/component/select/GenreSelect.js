@@ -4,6 +4,11 @@ import genreJsonInfo from '../../json/genreJsonInfo';
 const GenreSelect = function ({ genreName }) {
     return (
         <div className="genre-div">
+            <div className="hover-div">
+                <div className="hover-text-div">
+                    View Info
+                </div>
+            </div>
             <div className="genre-div-1" style={{
                 background: `url('img/select/genre-${genreName}.png') no-repeat center`,
                 backgroundSize: "cover"
