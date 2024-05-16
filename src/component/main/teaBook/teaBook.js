@@ -1,9 +1,11 @@
+import './teaBook.css'
 import Book from './book/book.js'
 import Tea from './tea/tea.js'
-const TeaBook = () => {
+
+const TeaBook = ({ themeStyle }) => {
     return (
         <div>
-            <Book />
+            <Book themeStyle={themeStyle}/>
             <Tea />
         </div>
     )
