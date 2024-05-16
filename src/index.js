@@ -6,6 +6,7 @@ import Header from './component/header/header.js'
 import Info from './component/info/Info.js'
 import Select from './component/select/Select'
 import Footer from './component/footer/footer.js'
+import Main from './component/main/main.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const Index = (props) => {
@@ -17,6 +18,7 @@ const Index = (props) => {
             <Header />
             <Info themeStyle={theme} />
             <Select />
+            <Main themeStyle={theme}/>
             <Footer />
         </div>
     )

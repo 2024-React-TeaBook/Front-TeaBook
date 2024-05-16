@@ -19,9 +19,9 @@ const Circle = () => {
     }, [])
 
     return (
-        <div class="circle">
-            <div class="logo"></div>
-            <div class="text">
+        <div className="circle">
+            <div className="logo"></div>
+            <div className="text">
                 Tea And Book And
             </div>
         </div>
