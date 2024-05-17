@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import useImageToggle from "./Toggler";
 import { playMusic, stopMusic, setMusicTime } from "./musicController";
 import './nav.css';
+import { Link } from "react-router-dom";
 
 const Nav = function () {
     const toggle1 = `${process.env.PUBLIC_URL}/img/nav/toggle-stop.png`;
@@ -34,8 +35,12 @@ const Nav = function () {
             <nav>
                 <img src={`${process.env.PUBLIC_URL}/img/logo/logo-white.png`} className='Header-logo' alt="logo" />
                 <ul className="menu-ul">
-                    <li className={"li-text"}>사이트 소개</li>
-                    <li className={"li-text"}>장르 선택</li>
+                    <li className={"li-text"} onClick={()=> {
+                        document.getElementById("info_").scrollIntoView({ behavior: "smooth" })
+                    }}>사이트 소개</li>
+                    <li className={"li-text"} onClick={()=> {
+                        document.getElementById("select_").scrollIntoView({ behavior: "smooth" })
+                    }}>장르 선택</li>
                     <li>
                         <div className="music-player-div">
                             <img

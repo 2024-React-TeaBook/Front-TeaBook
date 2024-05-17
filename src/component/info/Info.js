@@ -7,7 +7,7 @@ const Info = ({ themeStyle }) => {
 
     return (
         <div className="top">
-            <div className='info'>
+            <div id="info_" className='info'>
                 <InfoContainer classNameItem={"left"} themeStyle={themeStyle} />
                 <InfoContainer classNameItem={"right"} themeStyle={themeStyle} />
                 <Circle />

@@ -29,6 +29,10 @@ nav {
     color: var(--bs-white);
 }
 
+.li-text:hover{
+    cursor: pointer;
+}
+
 
 .music-player-div {
     width: 100px;
