@@ -1,4 +1,8 @@
 .tea-container {
-    height: 300px;
+    height: 340px;
     background-color: var(--bs-main-9);
+}
+
+.tea-title > div{
+    color: var(--bs-white);
 }
