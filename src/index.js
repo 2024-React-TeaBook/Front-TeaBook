@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import './style.css'
 import Nav from './component/nav/nav.js'
 import Header from './component/header/header.js'
-import Info from './component/info/info.js'
+import Info from './component/info/Info.js'
 import Select from './component/select/Select'
 import Footer from './component/footer/footer.js'
 import Main from './component/main/main.js'
