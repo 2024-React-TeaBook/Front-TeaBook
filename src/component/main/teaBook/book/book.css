@@ -1,5 +1,5 @@
 .book-container {
-    height: 440px;
+    height: 480px;
     background-color: var(--bs-main-7);
 }
 .book-title > div:nth-child(1) {
@@ -18,10 +18,19 @@
     width: fit-content;
 }
 .book-img {
-    width: 175px;
-    height: 260px;
+    width: 200px;
+    height: 290px;
 }
 .book-text-info {
+    margin-top: 8px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.book-text-info > div:nth-child(1) {
+    font-weight: var(--bs-font-bold);
+    font-size: var(--bs-font-12px);
+}
+.book-text-info > div:nth-child(2) {
+    font-size: var(--bs-font-10px);
 }

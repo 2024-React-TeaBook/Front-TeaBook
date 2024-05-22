@@ -6,7 +6,7 @@ const TeaBook = ({ themeStyle }) => {
     return (
         <div>
             <Book themeStyle={themeStyle}/>
-            <Tea />
+            <Tea themeStyle={themeStyle}/>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 .teaBook-container {
-    padding-top: 24px;
+    padding-top: 32px;
 }
 .teaBook-title-container {
     text-align: center;
@@ -11,5 +11,5 @@
     font-weight: var(--bs-font-bold);
     font-size: var(--bs-font-24px);
     margin-top: 8px;
-    margin-bottom: 38px;
+    margin-bottom: 48px;
 }
