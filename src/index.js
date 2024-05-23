@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import './style.css'
@@ -12,7 +12,6 @@ import Main from './component/main/main.js'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const Index = (props) => {
     const [theme, setTheme] = useState("romance");
-    const infoRef = useRef()
 
     return (
         <BrowserRouter>
@@ -20,7 +19,7 @@ const Index = (props) => {
             <Nav />
             <Header />
             <Info themeStyle={theme} />
-            <Select />
+            <Select setTheme={setTheme} />
             <Main themeStyle={theme} />
             <Footer />
         </div>

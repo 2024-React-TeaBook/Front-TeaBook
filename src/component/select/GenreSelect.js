@@ -1,9 +1,9 @@
 import './select.css';
 import genreJsonInfo from '../../json/genreJsonInfo';
 
-const GenreSelect = function ({ genreName }) {
+const GenreSelect = function ({ genreName, setTheme }) {
     return (
-        <div className="genre-div">
+        <div className="genre-div" onClick={() => {setTheme(genreName)}}>
             <div className="hover-div">
                 <div className="hover-text-div">
                     <div className="hover-text">

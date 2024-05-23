@@ -1,7 +1,7 @@
 import './select.css'
 import GenreSelect from "./GenreSelect";
 
-const Select = function () {
+const Select = function ({setTheme}) {
     return (
         <div>
             <div id="select_" className="select-div">
@@ -17,9 +17,9 @@ const Select = function () {
                 <div className="select-genre-div-parent">
                     <div className="select-genre-div">
 
-                        <GenreSelect genreName="romance" />
-                        <GenreSelect genreName="horror" />
-                        <GenreSelect genreName="sf" />
+                        <GenreSelect genreName="romance" setTheme={setTheme}/>
+                        <GenreSelect genreName="horror" setTheme={setTheme}/>
+                        <GenreSelect genreName="sf" setTheme={setTheme}/>
                     </div>
                 </div>
 

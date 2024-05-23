@@ -5,8 +5,7 @@ const Genre = ({ themeStyle }) => {
     return (
         <div className='genre-conatainer'>
             <div className='genre-img-container' style={{
-                background: `url('img/genre/genrebg-${themeStyle}.png') no-repeat center`,
-                backgroundSize: "cover"
+                background: `url('img/genre/genrebg-${themeStyle}.png') no-repeat center`
             }}></div>
 
             <div className='genre-text-container'>
