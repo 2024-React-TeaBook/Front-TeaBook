@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import './genre.css'
 import genreJsonInfo from '../../../json/genreJsonInfo';
 
-const Genre = ({ themeStyle }) => {
+const Genre = ({ themeStyle, currentImage, handleToggle, isPlaying }) => {
+
+    const [ togglePadding, settogglePadding ] = useState('')
+
     return (
         <div className='genre-conatainer'>
             <div className='genre-img-container' style={{
@@ -25,6 +29,14 @@ const Genre = ({ themeStyle }) => {
                                 </>
                             );
                         })}
+                    </div>
+                    <div className='audio-player-div' >
+                        <img
+                            src={currentImage}
+                            className='player-toggle'
+                            onClick={handleToggle}
+                            alt={isPlaying ? "stop" : "play"}
+                        />
                     </div>
                 </div>
 
