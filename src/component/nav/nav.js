@@ -1,35 +1,9 @@
 // Nav.js
-import React, { useState } from "react";
-import useImageToggle from "./Toggler";
-import { playMusic, stopMusic, setMusicTime } from "./musicController";
+import React from "react";
 import './nav.css';
-import { Link } from "react-router-dom";
 
-const Nav = function () {
-    const toggle1 = `${process.env.PUBLIC_URL}/img/nav/toggle-stop.png`;
-    const toggle2 = `${process.env.PUBLIC_URL}/img/nav/toggle-play.png`;
-
-    const [currentImage, toggleImage] = useImageToggle(toggle1, toggle2);
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [currentTime, setCurrentTime] = useState(0);
-
-
-    const handleToggle = () => {
-        toggleImage();
-        setIsPlaying(!isPlaying);
-        if (isPlaying) {
-            stopMusic();
-        } else {
-            playMusic("audio/main.mp3");
-        }
-    };
-
-    const handleTimeChange = (e) => {
-        const newTime = e.target.value;
-        setCurrentTime(newTime);
-        setMusicTime(newTime);
-    };
-
+const Nav = function ({currentImage, currentTime, isPlaying, handleToggle, handleTimeChange}) {
+    
     return (
         <div className="top">
             <nav>

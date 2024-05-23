@@ -1,5 +1,5 @@
 .genre-conatainer {
-    height: 260px;
+    height: 280px;
     background-color: var(--bs-white);
     position: relative;
 }
@@ -18,7 +18,7 @@
     margin-left: 6vw;
     text-align: center;
     align-items: center;
-    height: 260px;
+    height: 280px;
 }
 .genre-hashTag {
     font-size: var(--bs-font-12px);
@@ -32,4 +32,15 @@
 .genre-content {
     font-size: var(--bs-font-14px);
     line-height: 1.6; 
+}
+
+.audio-player-div {
+    display: inline-block;
+    border: 0.5px solid var(--bs-black);
+    margin-top: 16px;
+    padding: 15px 15px;
+    border-radius: 100%;
+}
+.audio-player-div > img {
+    filter: brightness(0%);
 }
