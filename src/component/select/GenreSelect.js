@@ -6,7 +6,9 @@ const GenreSelect = function ({ genreName }) {
         <div className="genre-div">
             <div className="hover-div">
                 <div className="hover-text-div">
-                    View Info
+                    <div className="hover-text">
+                        View Info
+                    </div>
                 </div>
             </div>
             <div className="genre-div-1" style={{

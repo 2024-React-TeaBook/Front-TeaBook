@@ -104,10 +104,12 @@
     border-radius: 100px 100px 0px 0px;
     opacity: 0;
     transition: 0.7s;
+    position: absolute;
 }
 
 .hover-div:hover {
     opacity: 1;
+    cursor: pointer;
 }
 
 .hover-text-div {
@@ -120,3 +122,45 @@
     padding-left: 20px;
     padding-top:90px;
 }
+
+/* Top and Bottom borders go out */
+div.hover-div .hover-text:before, div.hover-div .hover-text:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.hover-div .hover-text:before
+{
+    top: 0px;
+    transform: translateY(10px);
+}
+
+div.hover-div .hover-text:after
+{
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+div.hover-div .hover-text-div:hover .hover-text:before, div.hover-div .hover-text-div:hover .hover-text:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.hover-text-div {
+    height: 100%;
+    position: relative;
+}
+
+.hover-text {
+    position: relative;
+    padding: 20px 0 20px 0;
+}
+
