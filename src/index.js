@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import './style.css'
@@ -11,7 +11,6 @@ import Main from './component/main/main.js'
 
 // audio
 import useImageToggle from "./audio/Toggler.js";
-import { playMusic, stopMusic, setMusicTime } from "./audio/musicController.js";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const Index = (props) => {
@@ -24,36 +23,67 @@ const Index = (props) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
 
+    useEffect(() => {
+        const audio = document.getElementById('audio-element');
+
+        const handleTimeUpdate = () => {
+            if (audio) {
+                setCurrentTime(audio.currentTime);
+            }
+        };
+
+        if (audio) {
+            audio.addEventListener('timeupdate', handleTimeUpdate);
+        }
+
+        return () => {
+            if (audio) {
+                audio.removeEventListener('timeupdate', handleTimeUpdate);
+            }
+        };
+    }, []);
 
     const handleToggle = () => {
+        const audio = document.getElementById('audio-element');
         toggleImage();
         setIsPlaying(!isPlaying);
         if (isPlaying) {
-            stopMusic();
+            audio.pause();
         } else {
-            playMusic("audio/main.mp3");
+            audio.play();
         }
     };
 
     const handleTimeChange = (e) => {
         const newTime = e.target.value;
         setCurrentTime(newTime);
-        setMusicTime(newTime);
+        const audio = document.getElementById('audio-element');
+        if (audio) {
+            audio.currentTime = newTime;
+        }
     };
 
     return (
         <BrowserRouter>
-        <div>
-            <Nav currentImage={currentImage} currentTime={currentTime} isPlaying={isPlaying} handleToggle={handleToggle} handleTimeChange={handleTimeChange}/>
-            <Header />
-            <Info themeStyle={theme} />
-            <Select setTheme={setTheme} />
-            <Main themeStyle={theme} currentImage={currentImage} handleToggle={handleToggle} isPlaying={isPlaying}/>
-            <Footer />
-        </div>
+            <div>
+                <audio id="audio-element" src="audio/main.mp3"></audio>
+                <Nav
+                    currentImage={currentImage}
+                    currentTime={currentTime}
+                    isPlaying={isPlaying}
+                    handleToggle={handleToggle}
+                    handleTimeChange={handleTimeChange}
+                />
+                <Header />
+                <Info themeStyle={theme} />
+                <Select setTheme={setTheme} />
+                <Main themeStyle={theme} currentImage={currentImage} handleToggle={handleToggle} isPlaying={isPlaying} />
+                <Footer />
+            </div>
         </BrowserRouter>
     )
 }
+
 root.render(
     <Index />
 );

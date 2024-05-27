@@ -117,7 +117,7 @@
     height:250px;
     color: white;
     opacity: 1;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
     padding-left: 20px;
     padding-top:90px;
@@ -143,7 +143,7 @@ div.hover-div .hover-text:before
 }
 
 div.hover-div .hover-text:after
-{
+{   
     bottom: 0px;
     transform: translateY(-10px);
 }
@@ -161,6 +161,6 @@ div.hover-div .hover-text-div:hover .hover-text:before, div.hover-div .hover-tex
 
 .hover-text {
     position: relative;
-    padding: 20px 0 20px 0;
+    padding: 30px 0 30px 0;
 }
 
