@@ -36,11 +36,11 @@
 
 .audio-player-div {
     display: inline-block;
-    border: 0.5px solid var(--bs-black);
+    border: 0.5px solid var(--bs-black-80);
     margin-top: 16px;
     padding: 15px 15px;
     border-radius: 100%;
 }
 .audio-player-div > img {
-    filter: brightness(0%);
+    filter: invert(28%) sepia(0%) saturate(0%) hue-rotate(195deg) brightness(98%) contrast(88%);
 }

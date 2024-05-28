@@ -12,16 +12,35 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    /* 페이지 가운데에 배치 */
 }
 
-.tea>.tea-div {
-    background-color: orange;
+.tea-div {
     width: 325px;
     height: 246px;
     margin: 0 20px;
-    border-top-left-radius: 200px;
-    border-top-right-radius: 200px;
-    border-bottom-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-radius: 200px 200px 0 0;
+    transition: 0.8s;
+    color: var(--bs-white);
 }
+.tea-div:hover {
+    filter: brightness(100%) !important;
+    cursor: pointer;
+}
+.tea-div > div {
+    text-align: center;
+    text-shadow: -1px 0px var(--bs-black-60), 0px 1px var(--bs-black-60), 1px 0px var(--bs-black-60), 0px -1px var(--bs-black-60);
+}
+.tea-div > div:nth-child(1) {
+    padding-top: 63px;
+    font-size: var(--bs-font-24px);
+}
+.tea-div > div:nth-child(2) {
+    padding: 10px 0;
+    font-size: var(--bs-font-16px);
+}
+.tea-div > div:nth-child(3) {
+    font-size: var(--bs-font-14px);
+}
+
+
+
