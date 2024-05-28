@@ -3,6 +3,25 @@
     background-color: var(--bs-main-9);
 }
 
-.tea-title > div{
+.tea-title>div {
     color: var(--bs-white);
+}
+
+.tea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    /* 페이지 가운데에 배치 */
+}
+
+.tea>.tea-div {
+    background-color: orange;
+    width: 325px;
+    height: 246px;
+    margin: 0 20px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
